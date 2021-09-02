@@ -15,16 +15,14 @@
  * console.log(any([0, 0, 0, 0])); -> false
  */
 
-export function any(array, callback) {
-  if (callback) {
-    for (let i = 0; i < array.length; i += 1) {
-      if (callback(array[i])) {
-        return true;
-      }
-    }
-  }
-  return false;
-}
+// export function any(array, callback = undefined) {
+//  if (!callback) {
+//    return array.some(el => Boolean(el) === true);
+//  }
+//  return Boolean(array.filter(callback).length);
+// }
 
+const any = (array, callback) =>
+  callback ? Boolean(array.filter(callback).length) : array.some(el => Boolean(el) === true);
 // export default { any } from './array-practice/task1.js'
-// export default { any };
+export default { any };
