@@ -13,5 +13,5 @@ export function task13Old(arr) {
 // При желании, можете использовать стрелочную функцию, вместо обычной
 
 export function task13New(arr) {
-  return arr.flat(Infinity)
+  return arr.flat(Infinity);
 }
