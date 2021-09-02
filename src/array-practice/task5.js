@@ -15,3 +15,14 @@
  * generator.next(); -> 'Complete!'
  * generator.next(); -> 'Complete!'
  */
+
+const createGenerator = array => {
+  const copyArray = array.slice();
+  return {
+    next() {
+      return copyArray.length === 0 ? 'Complete!' : copyArray.shift();
+    },
+  };
+};
+
+export default { createGenerator };
