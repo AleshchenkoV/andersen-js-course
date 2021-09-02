@@ -44,9 +44,8 @@ export function task6New() {
     value,
     role: { name: role },
     isActive = false,
-    cases,
+    cases: [{ id: firstCaseId }],
   } = tmp;
-  const firstCaseId = tmp.cases[0].id;
 
-  return [name, value, role, isActive, firstCaseId, cases];
+  return [name, value, role, isActive, firstCaseId];
 }

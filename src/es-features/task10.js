@@ -55,3 +55,32 @@ export function task10Old() {
 // класс так, как использовалась функция-конструктор B в task10Old
 
 export function task10New() {}
+
+class A1 {
+  constructor(name) {
+    this.name = name;
+  }
+
+  getName() {
+    return this.name;
+  }
+}
+
+class B1 extends A1{
+  constructor(name, age) {
+    super(name);
+    this.age = age;
+  }
+
+  getName(text) {
+    return `${super.getName()} ${text}`;
+  }
+
+  getAge() {
+    return this.age;
+  }
+
+  defaultUser() {
+    return new B('test', 0);
+  }
+}
